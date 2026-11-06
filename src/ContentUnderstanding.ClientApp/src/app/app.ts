@@ -7,7 +7,7 @@ import { HeaderComponent } from './shared/header.component';
   imports: [RouterOutlet, HeaderComponent],
   template: `
     <app-header />
-    <main class="mx-auto max-w-4xl px-4 py-8">
+    <main id="main" class="mx-auto max-w-3xl px-4 py-10 sm:py-14">
       <router-outlet />
     </main>
   `,

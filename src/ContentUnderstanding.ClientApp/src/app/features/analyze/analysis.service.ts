@@ -47,6 +47,6 @@ export class AnalysisService {
     if (error.status === 401 || error.status === 403) {
       return 'You are not authorised to use this service.';
     }
-    return 'The document could not be analysed. Please try again.';
+    return 'The document could not be analysed. Check that the file opens normally, then try again.';
   }
 }
