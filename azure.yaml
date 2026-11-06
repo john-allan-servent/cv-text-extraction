@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: foundry-content-understanding
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
+
+services:
+  api:
+    project: ./src/ContentUnderstanding.Api
+    host: containerapp
+    language: dotnet
+    docker:
+      path: ../../Dockerfile
+      context: ../..
+      remoteBuild: true
+
+hooks:
+  postprovision:
+    windows:
+      shell: pwsh
+      run: ./scripts/post-provision.ps1
+      interactive: true
+    posix:
+      shell: sh
+      run: ./scripts/post-provision.sh
+      interactive: true

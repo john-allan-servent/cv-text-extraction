@@ -1,0 +1,63 @@
+# .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+*.nupkg
+*.snupkg
+
+# Tests and coverage
+TestResults/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
+
+# Visual Studio / Rider
+.vs/
+*.user
+*.suo
+*.userprefs
+.idea/
+*.DotSettings.user
+_ReSharper*/
+
+# VS Code (keep shared config)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Node / Angular
+node_modules/
+.angular/
+dist/
+npm-debug.log*
+yarn-error.log*
+src/ContentUnderstanding.Api/wwwroot/
+
+# Azure Developer CLI / Bicep
+.azure/
+*.bicepparam.local
+main.json
+
+# Local config and secrets
+appsettings.Local.json
+appsettings.*.local.json
+*.env
+.env*
+secrets.json
+*.pfx
+*.key
+
+# Logs and temp
+*.log
+logs/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
